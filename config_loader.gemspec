@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'config_loader/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "config_loader"
+  spec.name          = "simple_config_loader"
   spec.version       = ConfigLoader.version
   spec.authors       = ["Dean Brundage"]
   spec.email         = ["dean@deanandadie.net"]
