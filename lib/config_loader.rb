@@ -14,12 +14,13 @@ class ConfigLoader
 
   def read
     open_stream
-    if block_given?
-      yield handle
-    else
-      @stream_loader.load_stream(handle)[0]
-    end
+    r = if block_given?
+          yield handle
+        else
+          @stream_loader.load_stream(handle)[0]
+        end
     close_stream
+    return r
   end
 
 
